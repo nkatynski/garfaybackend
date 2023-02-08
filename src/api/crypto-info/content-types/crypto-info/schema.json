@@ -4,34 +4,34 @@
   "info": {
     "singularName": "crypto-info",
     "pluralName": "crypto-infos",
-    "displayName": "Crypto_Info",
-    "description": ""
+    "displayName": "Crypto_Info"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Account_Num": {
+    "Username": {
       "type": "string",
-      "unique": true
+      "required": true
+    },
+    "Account_Num": {
+      
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "private": true
     },
     "Password": {
       "type": "password",
+      "required": true,
       "minLength": 8,
-      "private": true,
-      "required": true
+      "private": true
     },
     "Email": {
       "type": "email",
-      "required": true,
-      "unique": true
-    },
-    "user_account": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::user-account.user-account",
-      "inversedBy": "crypto_info"
+      "unique": true,
+      "required": true
     }
   }
 }

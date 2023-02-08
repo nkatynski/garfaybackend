@@ -4,8 +4,7 @@
   "info": {
     "singularName": "training-completed",
     "pluralName": "training-completeds",
-    "displayName": "Training_Completed",
-    "description": ""
+    "displayName": "Training_Completed"
   },
   "options": {
     "draftAndPublish": true
@@ -18,24 +17,12 @@
     },
     "Username": {
       "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "Email": {
-      "type": "email",
-      "unique": true,
       "required": true
     },
     "Completed_Training": {
       "type": "boolean",
-      "required": true,
-      "default": false
-    },
-    "user_account": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::user-account.user-account",
-      "mappedBy": "training_completed"
+      "default": false,
+      "required": true
     }
   }
 }

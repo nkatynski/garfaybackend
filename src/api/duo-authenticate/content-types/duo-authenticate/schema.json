@@ -4,8 +4,7 @@
   "info": {
     "singularName": "duo-authenticate",
     "pluralName": "duo-authenticates",
-    "displayName": "Duo_Authenticate ",
-    "description": ""
+    "displayName": "Duo_Authenticate"
   },
   "options": {
     "draftAndPublish": true
@@ -14,26 +13,19 @@
   "attributes": {
     "Email": {
       "type": "email",
+      "required": true
+    },
+    "Phone_Number": {
+      "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "private": true
     },
     "Password": {
       "type": "password",
       "required": true,
-      "minLength": 8,
-      "private": true
-    },
-    "Phone_Number": {
-      "type": "string",
-      "unique": false,
-      "required": true,
-      "private": true
-    },
-    "user_account": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::user-account.user-account",
-      "mappedBy": "duo_authenticate"
+      "private": true,
+      "minLength": 8
     }
   }
 }
